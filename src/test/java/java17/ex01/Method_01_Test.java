@@ -19,6 +19,14 @@ public class Method_01_Test {
 
         // TODO créer une méthode int sumAge()
         // TODO Cette méthode retourne le résultat de l'addition des ages des personnes
+        public default int sumAge(int... ages) {
+            int sum = 0;
+
+            for (int age : ages) {
+                sum += age;
+            }
+            return sum;
+        }
     }
     // end::IDao[]
 
@@ -48,7 +56,7 @@ public class Method_01_Test {
         DaoA daoA = new DaoA();
 
         // TODO invoquer la méthode sumAge pour que le test soit passant
-        int result = 0;
+        int result = daoA.sumAge(10, 200);
 
         assert result == 210;
     }
@@ -59,7 +67,7 @@ public class Method_01_Test {
         DaoB daoB = new DaoB();
 
         // TODO invoquer la méthode sumAge pour que le test soit passant
-        int result = 0;
+        int result = daoB.sumAge(40, 10, 5000);
 
         assert result == 5050;
 
