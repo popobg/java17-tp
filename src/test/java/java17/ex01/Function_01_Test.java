@@ -22,7 +22,7 @@ public class Function_01_Test {
     // TODO le nom sera de la forme "last_<ENTIER>"
     // TODO l'age sera de la forme "<ENTIER>"
     // TODO le mot de passe sera de la forme "pass_<ENTIER>"
-    private Function<Integer, Person> intToPerson = (number) -> new Person(String.format("first_%d", number), String.format("last_%d", number), number, String.format("pass_%d", number));
+    private Function<Integer, Person> intToPerson = number -> new Person(String.format("first_%d", number), String.format("last_%d", number), number, String.format("pass_%d", number));
     // end::intToPerson[]
 
     @Test

@@ -1,6 +1,5 @@
 package java17.ex06;
 
-
 import java.util.function.Supplier;
 
 import org.junit.jupiter.api.Test;
